@@ -1,0 +1,668 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RK Dental Lab — Пловдив</title>
+    <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- Brand dock (always visible) -->
+    <a class="brandDock" href="#hero" aria-label="Име на лабораторията">
+      <img
+        class="brandDock__logo brandDock__logo--accent"
+        src="./assets/logo.svg"
+        alt=""
+        aria-hidden="true"
+      />
+      <div class="brandDock__name">RK DENTAL LAB</div>
+    </a>
+
+    <!-- Progress slider indicator (bottom-right, NOT interactive) -->
+    <div class="progressDock" aria-hidden="true">
+      <div class="progressDock__track">
+        <div class="progressDock__fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <main class="page" id="top">
+      <!-- HERO (full-screen panel) -->
+      <section class="hero" id="hero">
+        <div class="container hero__grid hero__grid--stack">
+          <div class="hero__copy hero__copy--watermark">
+            <img
+              class="hero__mark"
+              src="./assets/Hero.png"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <p class="kicker reveal">ЗЪБОТЕХНИЧЕСКА ЛАБОРАТОРИЯ · ПЛОВДИВ</p>
+
+            <h1 class="hero__title reveal">
+              Прецизност, която се вижда.
+              <span class="accent">Точност. Комуникация. Контрол.</span>
+            </h1>
+
+            <div class="hero__actions reveal">
+              <a class="btn btn--primary" href="#contact">Свържи се с нас</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUICK FACTS -->
+      <section class="quick" id="quick">
+        <div class="container">
+          <div class="quick__grid">
+            <div class="quickCard reveal">
+              <div class="quickCard__k">Локация</div>
+              <div class="quickCard__v">Пловдив</div>
+              <div class="quickCard__s">
+                Работа с клиники в страната чрез куриерска фирма.
+              </div>
+            </div>
+
+            <div class="quickCard reveal">
+              <div class="quickCard__k">Срокове</div>
+              <div class="quickCard__v">5–7 работни дни</div>
+              <div class="quickCard__s">Естетика: 7–10 дни</div>
+            </div>
+
+            <div class="quickCard reveal">
+              <div class="quickCard__k">1:1</div>
+              <div class="quickCard__v">Директна работа</div>
+              <div class="quickCard__s">
+                Един зъботехник — лична отговорност за случая.
+              </div>
+            </div>
+          </div>
+
+          <p class="quick__note reveal">
+            * Други конструкции — по предварително запитване.
+          </p>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="chapter" id="about-us">
+        <div class="container chapter__grid">
+          <aside class="chapter__side reveal">
+            <div class="chapter__index">01</div>
+            <div class="chapter__label">За лабораторията</div>
+          </aside>
+
+          <div class="chapter__main">
+            <h2 class="chapter__title reveal">Лаборатория с личен подход.</h2>
+
+            <p class="chapter__text reveal">
+              RK Dental Lab е самостоятелна зъботехническа лаборатория с над 30
+              години практика. Всеки случай се изработва от един зъботехник — от
+              планирането до финалния контрол. Това означава последователност,
+              яснота и отговорност за резултата.
+            </p>
+
+            <p class="chapter__text reveal">
+              Работим партньорски със стоматолози от Пловдив и цялата страна, с
+              директна комуникация и реалистични уточнения по случая.
+            </p>
+
+            <div class="metrics">
+              <div class="metric reveal">
+                <div class="metric__big">Сигурност</div>
+                <div class="metric__small">проверка преди предаване</div>
+              </div>
+
+              <div class="metric reveal">
+                <div class="metric__big">Дигитално</div>
+                <div class="metric__small">работа по скан и отпечатък</div>
+              </div>
+
+              <div class="metric reveal">
+                <div class="metric__big">Логистика</div>
+                <div class="metric__small">Пловдив + куриер за страната</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BENEFITS -->
+      <section class="chapter" id="benefits">
+        <div class="container chapter__grid">
+          <aside class="chapter__side reveal">
+            <div class="chapter__index">02</div>
+            <div class="chapter__label">За клиниката</div>
+          </aside>
+
+          <div class="chapter__main">
+            <h2 class="chapter__title reveal">
+              Работа, която улеснява кабинета.
+            </h2>
+
+            <div class="serviceGrid">
+              <article class="serviceCard reveal">
+                <h3>Предвидимост</h3>
+                <p>Яснота и стандарт на изработка.</p>
+              </article>
+
+              <article class="serviceCard reveal">
+                <h3>По-малко корекции</h3>
+                <p>
+                  Контрол при изработката, за да става бързо и спокойно в
+                  кабинета.
+                </p>
+              </article>
+
+              <article class="serviceCard reveal">
+                <h3>Подкрепа</h3>
+                <p>
+                  Насреща сме при нужда от насока, уточнение или бърза реакция.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARTNERSHIP -->
+      <section class="chapter" id="partnership">
+        <div class="container chapter__grid">
+          <aside class="chapter__side reveal">
+            <div class="chapter__index">03</div>
+            <div class="chapter__label">Партньорство</div>
+          </aside>
+
+          <div class="chapter__main">
+            <h2 class="chapter__title reveal">Как протича работата.</h2>
+
+            <div class="serviceGrid">
+              <article class="serviceCard reveal">
+                <h3>Уточняване по случая</h3>
+                <p>
+                  При прием уточняваме материал, нюанс и приоритет. Целта е да
+                  няма изненади по време на изработката.
+                </p>
+              </article>
+
+              <article class="serviceCard reveal">
+                <h3>Срокове</h3>
+                <p>
+                  Стандартно: 5–7 работни дни. Естетични случаи: 7–10 работни
+                  дни. При комплексни конструкции срокът се уточнява
+                  предварително.
+                </p>
+              </article>
+
+              <article class="serviceCard reveal">
+                <h3>Доставка</h3>
+                <p>
+                  Изпращане с куриер до цялата страна. Организираме логистиката
+                  така, че да не забавя процеса.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CASES -->
+      <section class="chapter chapter--muted" id="cases">
+        <div class="container chapter__grid">
+          <aside class="chapter__side reveal">
+            <div class="chapter__index">04</div>
+            <div class="chapter__label">Случаи</div>
+          </aside>
+
+          <div class="chapter__main">
+            <h2 class="chapter__title reveal">Подбрани работи</h2>
+            <div class="cases">
+              <article class="case reveal">
+                <h3 class="case__title">Металокерамична конструкция</h3>
+                <p class="case__text">
+                  Плейсхолдър (кратко: какво беше важно — форма,
+                  транслуцентност, линия на усмивката).
+                </p>
+
+                <div class="case__media">
+                  <img
+                    class="case__img"
+                    src="./assets/cases/case-1.1.jpg"
+                    alt="Металокерамична конструкция — снимка 1"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    class="case__img"
+                    src="./assets/cases/case-1.2.jpg"
+                    alt="Металокерамична конструкция — снимка 2"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </article>
+
+              <article class="case reveal">
+                <div class="case__top">
+                  <span class="pill">Металокерамика</span>
+                  <span class="pill pill--muted">Фронт</span>
+                </div>
+                <h3 class="case__title">Постериор — контакти и оклузия</h3>
+                <p class="case__text">
+                  Плейсхолдър (кратко: QC фокус и предвидимо предаване).
+                </p>
+
+                <div class="case__media">
+                  <img
+                    class="case__img"
+                    src="./assets/cases/case-2.1.jpg"
+                    alt="Металокерамична конструкция — снимка 1"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <img
+                    class="case__img"
+                    src="./assets/cases/case-2.2.jpg"
+                    alt="Металокерамична конструкция — снимка 2"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES (Option 1) -->
+      <section class="chapter" id="services">
+        <div class="container chapter__grid">
+          <aside class="chapter__side reveal">
+            <div class="chapter__index">05</div>
+            <div class="chapter__label">Услуги</div>
+          </aside>
+
+          <div class="chapter__main">
+            <h2 class="chapter__title reveal">Основни направления</h2>
+
+            <div class="servicesList">
+              <div class="serviceItem reveal">
+                <span class="serviceItem__n">01</span>
+                <h3>Цирконий</h3>
+              </div>
+
+              <div class="serviceItem reveal">
+                <span class="serviceItem__n">02</span>
+                <h3>Работа върху импланти</h3>
+              </div>
+
+              <div class="serviceItem reveal">
+                <span class="serviceItem__n">03</span>
+                <h3>Металокерамика</h3>
+              </div>
+
+              <div class="serviceItem reveal">
+                <span class="serviceItem__n">04</span>
+                <h3>Фасети</h3>
+              </div>
+
+              <div class="serviceItem serviceItem--wide reveal">
+                <span class="serviceItem__n">05</span>
+                <div class="serviceItem__stack">
+                  <h3>Други конструкции</h3>
+                  <div class="serviceItem__note">
+                    по предварително запитване
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW WE WORK -->
+      <section class="chapter chapter--muted" id="process">
+        <div class="container chapter__grid">
+          <aside class="chapter__side reveal">
+            <div class="chapter__index">06</div>
+            <div class="chapter__label">Процес</div>
+          </aside>
+
+          <div class="chapter__main">
+            <h2 class="chapter__title reveal">Стъпки</h2>
+
+            <ol class="steps">
+              <li class="step reveal">
+                <div class="step__n">1</div>
+                <div class="step__c">
+                  <h3>Прием</h3>
+                  <p>
+                    Поръчка + данни по случая (материал, нюанс, особености).
+                  </p>
+                </div>
+              </li>
+
+              <li class="step reveal">
+                <div class="step__n">2</div>
+                <div class="step__c">
+                  <h3>Уточняване</h3>
+                  <p>Критични параметри и очаквания за предаване.</p>
+                </div>
+              </li>
+
+              <li class="step reveal">
+                <div class="step__n">3</div>
+                <div class="step__c">
+                  <h3>Изработка</h3>
+                  <p>Производство и обработка според конкретния случай.</p>
+                </div>
+              </li>
+
+              <li class="step reveal">
+                <div class="step__n">4</div>
+                <div class="step__c">
+                  <h3>Финален контрол</h3>
+                  <p>Пасив, маргини, контакти, оклузия и визуална проверка.</p>
+                </div>
+              </li>
+
+              <li class="step reveal">
+                <div class="step__n">5</div>
+                <div class="step__c">
+                  <h3>Предаване</h3>
+                  <p>Подготовка и изпращане към клиниката.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="chapter chapter--final" id="contact">
+        <div class="container final">
+          <h2 class="final__title reveal">Контакт</h2>
+          <p class="final__text reveal">
+            Изпрати ни запитване с типа конструкция, броя елементи и желан срок
+            — ще отговорим с конкретика.
+          </p>
+
+          <div class="final__card reveal">
+            <div class="row">
+              <span class="row__k">Имейл</span>
+              <a class="row__v" href="mailto:rumen.kisyov.dental.lab@gmail.com"
+                >rumen.kisyov.dental.lab@gmail.com</a
+              >
+            </div>
+
+            <div class="row">
+              <span class="row__k">Телефон</span>
+              <a class="row__v" href="tel:+359887859765">+359 88 785 9765</a>
+            </div>
+
+            <div class="row">
+              <span class="row__k">Град</span>
+              <span class="row__v">Пловдив</span>
+            </div>
+
+            <div class="row">
+              <span class="row__k">Инстаграм</span>
+              <a
+                class="row__v"
+                href="https://www.instagram.com/rumen.kisyov.dental.lab"
+                target="_blank"
+                rel="noopener noreferrer"
+                >@rumen.kisyov.dental.lab</a
+              >
+            </div>
+
+            <div class="final__actions">
+              <a class="btn btn--ghost" href="#hero">Начало</a>
+            </div>
+          </div>
+
+          <p class="footnote">© <span id="year"></span> RK Dental Lab</p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        var yearEl = document.getElementById('year');
+        if (yearEl) {
+          yearEl.textContent = String(new Date().getFullYear());
+        }
+
+        var progressFill = document.getElementById('progressFill');
+
+        var page = document.querySelector('.page');
+        var sections = Array.prototype.slice.call(
+          document.querySelectorAll('.page > section'),
+        );
+        var prefersReducedMotion =
+          window.matchMedia &&
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!page || sections.length === 0) {
+          return;
+        }
+
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+
+        var currentIndex = 0;
+        var isLocked = false;
+        var lockMs = prefersReducedMotion ? 0 : 950;
+
+        function clampIndex(i) {
+          if (i < 0) {
+            return 0;
+          }
+          if (i > sections.length - 1) {
+            return sections.length - 1;
+          }
+          return i;
+        }
+
+        function setProgress(i) {
+          var denom = Math.max(1, sections.length - 1);
+          var p = (i / denom) * 100;
+
+          if (progressFill) {
+            progressFill.style.height = p.toFixed(2) + '%';
+          }
+        }
+
+        function revealIn(section) {
+          var nodes = section.querySelectorAll('.reveal');
+          nodes.forEach(function (el) {
+            el.classList.add('is-visible');
+          });
+        }
+
+        function setActive(i, pushHash) {
+          currentIndex = clampIndex(i);
+
+          sections.forEach(function (s, idx) {
+            var active = idx === currentIndex;
+
+            s.classList.toggle('is-active', active);
+            s.classList.remove('is-prev', 'is-next');
+
+            if (!active) {
+              if (idx < currentIndex) {
+                s.classList.add('is-prev');
+              } else {
+                s.classList.add('is-next');
+              }
+            }
+
+            s.setAttribute('aria-hidden', active ? 'false' : 'true');
+          });
+
+          revealIn(sections[currentIndex]);
+          setProgress(currentIndex);
+
+          if (pushHash) {
+            var id = sections[currentIndex].id;
+            if (id) {
+              history.replaceState(null, '', '#' + id);
+            }
+          }
+        }
+
+        function goTo(i, pushHash) {
+          var next = clampIndex(i);
+          if (next === currentIndex) {
+            return;
+          }
+          if (isLocked) {
+            return;
+          }
+
+          setActive(next, pushHash);
+
+          if (lockMs > 0) {
+            isLocked = true;
+            window.setTimeout(function () {
+              isLocked = false;
+            }, lockMs);
+          }
+        }
+
+        sections.forEach(function (s) {
+          s.classList.remove('is-active', 'is-prev', 'is-next');
+          s.setAttribute('aria-hidden', 'true');
+        });
+
+        var hash = (location.hash || '').replace('#', '');
+        if (hash) {
+          var startIdx = sections.findIndex(function (s) {
+            return s.id === hash;
+          });
+          if (startIdx >= 0) {
+            currentIndex = startIdx;
+          }
+        }
+
+        setActive(currentIndex, false);
+
+        function onWheel(e) {
+          if (prefersReducedMotion) {
+            return;
+          }
+
+          e.preventDefault();
+
+          var dy = e.deltaY || 0;
+          if (Math.abs(dy) < 8) {
+            return;
+          }
+
+          if (dy > 0) {
+            goTo(currentIndex + 1, true);
+          } else {
+            goTo(currentIndex - 1, true);
+          }
+        }
+
+        window.addEventListener('wheel', onWheel, {passive: false});
+
+        window.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+            e.preventDefault();
+            goTo(currentIndex + 1, true);
+            return;
+          }
+
+          if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+            e.preventDefault();
+            goTo(currentIndex - 1, true);
+            return;
+          }
+
+          if (e.key === 'Home') {
+            e.preventDefault();
+            goTo(0, true);
+            return;
+          }
+
+          if (e.key === 'End') {
+            e.preventDefault();
+            goTo(sections.length - 1, true);
+            return;
+          }
+        });
+
+        var touchY = null;
+
+        window.addEventListener(
+          'touchstart',
+          function (e) {
+            if (!e.touches || e.touches.length === 0) {
+              return;
+            }
+            touchY = e.touches[0].clientY;
+          },
+          {passive: true},
+        );
+
+        window.addEventListener(
+          'touchend',
+          function (e) {
+            if (touchY === null) {
+              return;
+            }
+            var endY =
+              (e.changedTouches &&
+                e.changedTouches[0] &&
+                e.changedTouches[0].clientY) ||
+              touchY;
+            var diff = touchY - endY;
+            touchY = null;
+
+            if (Math.abs(diff) < 40) {
+              return;
+            }
+
+            if (diff > 0) {
+              goTo(currentIndex + 1, true);
+            } else {
+              goTo(currentIndex - 1, true);
+            }
+          },
+          {passive: true},
+        );
+
+        document.addEventListener('click', function (e) {
+          var a =
+            e.target && e.target.closest
+              ? e.target.closest('a[href^="#"]')
+              : null;
+          if (!a) {
+            return;
+          }
+
+          var href = a.getAttribute('href') || '';
+          var id = href.replace('#', '').trim();
+          if (!id) {
+            return;
+          }
+
+          var idx = sections.findIndex(function (s) {
+            return s.id === id;
+          });
+
+          if (idx >= 0) {
+            e.preventDefault();
+            goTo(idx, true);
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
