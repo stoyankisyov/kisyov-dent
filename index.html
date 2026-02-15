@@ -4,665 +4,609 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>RK Dental Lab — Пловдив</title>
+    <title>RK Dental Lab</title>
     <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
-
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
   <body>
-    <!-- Brand dock (always visible) -->
-    <a class="brandDock" href="#hero" aria-label="Име на лабораторията">
-      <img
-        class="brandDock__logo brandDock__logo--accent"
-        src="./assets/logo.svg"
-        alt=""
-        aria-hidden="true"
-      />
-      <div class="brandDock__name">RK DENTAL LAB</div>
-    </a>
+    <div class="site">
+      <!-- Brand dock (always visible) -->
+      <a
+        class="brandDock"
+        href="#"
+        data-target="hero"
+        aria-label="Име на лабораторията"
+      >
+        <img
+          class="brandDock__logo brandDock__logo--accent"
+          src="./assets/logo.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="brandDock__name">RK DENTAL LAB</div>
+      </a>
 
-    <!-- Progress slider indicator (bottom-right, NOT interactive) -->
-    <div class="progressDock" aria-hidden="true">
-      <div class="progressDock__track">
-        <div class="progressDock__fill" id="progressFill"></div>
-      </div>
-    </div>
+      <!-- Dots navigation (active dot becomes a labeled pill) -->
+      <nav class="scrollNav" aria-label="Навигация по секции">
+        <div class="scrollNav__inner" id="railDots" aria-hidden="false"></div>
+      </nav>
 
-    <main class="page" id="top">
-      <!-- HERO (full-screen panel) -->
-      <section class="hero" id="hero">
-        <div class="container hero__grid hero__grid--stack">
-          <div class="hero__copy hero__copy--watermark">
-            <img
-              class="hero__mark"
-              src="./assets/hero.png"
-              alt=""
-              aria-hidden="true"
-            />
+      <main class="page" id="top">
+        <!-- HERO -->
+        <section class="hero section" id="hero" data-rail-label="Начало">
+          <div class="container hero__grid hero__grid--stack">
+            <div class="hero__copy hero__copy--watermark">
+              <img
+                class="hero__mark"
+                src="./assets/hero.png"
+                alt=""
+                aria-hidden="true"
+              />
 
-            <p class="kicker reveal">ЗЪБОТЕХНИЧЕСКА ЛАБОРАТОРИЯ · ПЛОВДИВ</p>
+              <p class="kicker reveal">ЗЪБОТЕХНИЧЕСКА ЛАБОРАТОРИЯ</p>
 
-            <h1 class="hero__title reveal">
-              Прецизност, която се вижда.
-              <span class="accent">Точност. Комуникация. Контрол.</span>
-            </h1>
+              <h1 class="hero__title reveal">
+                Прецизност, която се вижда.
+                <span class="accent">Точност, която се усеща.</span>
+              </h1>
 
-            <div class="hero__actions reveal">
-              <a class="btn btn--primary" href="#contact">Свържи се с нас</a>
-            </div>
-          </div>
-        </div>
-      </section>
+              <p class="hero__subtitle reveal">
+                Пловдив · Работа с клиники в страната чрез куриерска фирма
+              </p>
 
-      <!-- QUICK FACTS -->
-      <section class="quick" id="quick">
-        <div class="container">
-          <div class="quick__grid">
-            <div class="quickCard reveal">
-              <div class="quickCard__k">Локация</div>
-              <div class="quickCard__v">Пловдив</div>
-              <div class="quickCard__s">
-                Работа с клиники в страната чрез куриерска фирма.
-              </div>
-            </div>
-
-            <div class="quickCard reveal">
-              <div class="quickCard__k">Срокове</div>
-              <div class="quickCard__v">5–7 работни дни</div>
-              <div class="quickCard__s">Естетика: 7–10 дни</div>
-            </div>
-
-            <div class="quickCard reveal">
-              <div class="quickCard__k">1:1</div>
-              <div class="quickCard__v">Директна работа</div>
-              <div class="quickCard__s">
-                Един зъботехник — лична отговорност за случая.
+              <div class="hero__actions reveal">
+                <a
+                  class="btn btn--primary btn--lg btn--cta"
+                  href="#"
+                  data-target="contact"
+                >
+                  <span class="btn__label">Свържи се с нас</span>
+                  <span class="btn__icon" aria-hidden="true">↗</span>
+                </a>
               </div>
             </div>
           </div>
+        </section>
 
-          <p class="quick__note reveal">
-            * Други конструкции — по предварително запитване.
-          </p>
-        </div>
-      </section>
+        <!-- ABOUT -->
+        <section
+          class="chapter section"
+          id="about-us"
+          data-rail-label="За лабораторията"
+        >
+          <div class="container chapter__grid">
+            <div class="chapter__main">
+              <h2 class="chapter__title reveal slideTitle">
+                Лаборатория с личен подход.
+              </h2>
 
-      <!-- ABOUT -->
-      <section class="chapter" id="about-us">
-        <div class="container chapter__grid">
-          <aside class="chapter__side reveal">
-            <div class="chapter__index">01</div>
-            <div class="chapter__label">За лабораторията</div>
-          </aside>
+              <p class="chapter__text reveal">
+                RK Dental Lab е самостоятелна зъботехническа лаборатория с над 30
+                години практика. Всеки случай се изработва от един зъботехник —
+                от планирането до финалния контрол. Това означава
+                последователност, яснота и отговорност за резултата.
+              </p>
 
-          <div class="chapter__main">
-            <h2 class="chapter__title reveal">Лаборатория с личен подход.</h2>
-
-            <p class="chapter__text reveal">
-              RK Dental Lab е самостоятелна зъботехническа лаборатория с над 30
-              години практика. Всеки случай се изработва от един зъботехник — от
-              планирането до финалния контрол. Това означава последователност,
-              яснота и отговорност за резултата.
-            </p>
-
-            <p class="chapter__text reveal">
-              Работим партньорски със стоматолози от Пловдив и цялата страна, с
-              директна комуникация и реалистични уточнения по случая.
-            </p>
-
-            <div class="metrics">
-              <div class="metric reveal">
-                <div class="metric__big">Сигурност</div>
-                <div class="metric__small">проверка преди предаване</div>
-              </div>
-
-              <div class="metric reveal">
-                <div class="metric__big">Дигитално</div>
-                <div class="metric__small">работа по скан и отпечатък</div>
-              </div>
-
-              <div class="metric reveal">
-                <div class="metric__big">Логистика</div>
-                <div class="metric__small">Пловдив + куриер за страната</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- BENEFITS -->
-      <section class="chapter" id="benefits">
-        <div class="container chapter__grid">
-          <aside class="chapter__side reveal">
-            <div class="chapter__index">02</div>
-            <div class="chapter__label">За клиниката</div>
-          </aside>
-
-          <div class="chapter__main">
-            <h2 class="chapter__title reveal">
-              Работа, която улеснява кабинета.
-            </h2>
-
-            <div class="serviceGrid">
-              <article class="serviceCard reveal">
-                <h3>Предвидимост</h3>
-                <p>Яснота и стандарт на изработка.</p>
-              </article>
-
-              <article class="serviceCard reveal">
-                <h3>По-малко корекции</h3>
-                <p>
-                  Контрол при изработката, за да става бързо и спокойно в
-                  кабинета.
-                </p>
-              </article>
-
-              <article class="serviceCard reveal">
-                <h3>Подкрепа</h3>
-                <p>
-                  Насреща сме при нужда от насока, уточнение или бърза реакция.
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PARTNERSHIP -->
-      <section class="chapter" id="partnership">
-        <div class="container chapter__grid">
-          <aside class="chapter__side reveal">
-            <div class="chapter__index">03</div>
-            <div class="chapter__label">Партньорство</div>
-          </aside>
-
-          <div class="chapter__main">
-            <h2 class="chapter__title reveal">Как протича работата.</h2>
-
-            <div class="serviceGrid">
-              <article class="serviceCard reveal">
-                <h3>Уточняване по случая</h3>
-                <p>
-                  При прием уточняваме материал, нюанс и приоритет. Целта е да
-                  няма изненади по време на изработката.
-                </p>
-              </article>
-
-              <article class="serviceCard reveal">
-                <h3>Срокове</h3>
-                <p>
-                  Стандартно: 5–7 работни дни. Естетични случаи: 7–10 работни
-                  дни. При комплексни конструкции срокът се уточнява
-                  предварително.
-                </p>
-              </article>
-
-              <article class="serviceCard reveal">
-                <h3>Доставка</h3>
-                <p>
-                  Изпращане с куриер до цялата страна. Организираме логистиката
-                  така, че да не забавя процеса.
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CASES -->
-      <section class="chapter chapter--muted" id="cases">
-        <div class="container chapter__grid">
-          <aside class="chapter__side reveal">
-            <div class="chapter__index">04</div>
-            <div class="chapter__label">Случаи</div>
-          </aside>
-
-          <div class="chapter__main">
-            <h2 class="chapter__title reveal">Подбрани работи</h2>
-            <div class="cases">
-              <article class="case reveal">
-                <h3 class="case__title">Металокерамична конструкция</h3>
-                <p class="case__text">
-                  Плейсхолдър (кратко: какво беше важно — форма,
-                  транслуцентност, линия на усмивката).
-                </p>
-
-                <div class="case__media">
-                  <img
-                    class="case__img"
-                    src="./assets/cases/case-1.1.JPG"
-                    alt="Металокерамична конструкция — снимка 1"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <img
-                    class="case__img"
-                    src="./assets/cases/case-1.2.JPG"
-                    alt="Металокерамична конструкция — снимка 2"
-                    loading="lazy"
-                    decoding="async"
-                  />
+              <div class="metrics">
+                <div class="metric reveal">
+                  <div class="metric__big">Сигурност</div>
+                  <div class="metric__small">проверка преди предаване</div>
                 </div>
-              </article>
 
-              <article class="case reveal">
-                <div class="case__top">
-                  <span class="pill">Металокерамика</span>
-                  <span class="pill pill--muted">Фронт</span>
+                <div class="metric reveal">
+                  <div class="metric__big">Дигитално</div>
+                  <div class="metric__small">работа по скан и отпечатък</div>
                 </div>
-                <h3 class="case__title">Постериор — контакти и оклузия</h3>
-                <p class="case__text">
-                  Плейсхолдър (кратко: QC фокус и предвидимо предаване).
-                </p>
 
-                <div class="case__media">
-                  <img
-                    class="case__img"
-                    src="./assets/cases/case-2.1.JPG"
-                    alt="Металокерамична конструкция — снимка 1"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <img
-                    class="case__img"
-                    src="./assets/cases/case-2.2.JPG"
-                    alt="Металокерамична конструкция — снимка 2"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                <div class="metric reveal">
+                  <div class="metric__big">Логистика</div>
+                  <div class="metric__small">Пловдив + куриер за страната</div>
                 </div>
-              </article>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- SERVICES (Option 1) -->
-      <section class="chapter" id="services">
-        <div class="container chapter__grid">
-          <aside class="chapter__side reveal">
-            <div class="chapter__index">05</div>
-            <div class="chapter__label">Услуги</div>
-          </aside>
+        <!-- BENEFITS -->
+        <section class="chapter section" id="benefits" data-rail-label="За клиниката">
+          <div class="container chapter__grid">
+            <div class="chapter__main">
+              <h2 class="chapter__title reveal slideTitle">
+                Работа, която улеснява кабинета.
+              </h2>
 
-          <div class="chapter__main">
-            <h2 class="chapter__title reveal">Основни направления</h2>
+              <div class="serviceGrid">
+                <article class="serviceCard reveal">
+                  <h3>Предвидимост</h3>
+                  <p>Яснота и стандарт на изработка.</p>
+                </article>
 
-            <div class="servicesList">
-              <div class="serviceItem reveal">
-                <span class="serviceItem__n">01</span>
-                <h3>Цирконий</h3>
+                <article class="serviceCard reveal">
+                  <h3>По-малко корекции</h3>
+                  <p>
+                    Контрол при изработката, за да става бързо и спокойно в кабинета.
+                  </p>
+                </article>
+
+                <article class="serviceCard reveal">
+                  <h3>Подкрепа</h3>
+                  <p>Насреща сме при нужда от насока, уточнение или бърза реакция.</p>
+                </article>
               </div>
+            </div>
+          </div>
+        </section>
 
-              <div class="serviceItem reveal">
-                <span class="serviceItem__n">02</span>
-                <h3>Работа върху импланти</h3>
+        <!-- PARTNERSHIP -->
+        <section
+          class="chapter section"
+          id="partnership"
+          data-rail-label="Партньорство"
+        >
+          <div class="container chapter__grid">
+            <div class="chapter__main">
+              <h2 class="chapter__title reveal slideTitle">
+                Как протича работата.
+              </h2>
+
+              <div class="serviceGrid">
+                <article class="serviceCard reveal">
+                  <h3>Уточняване по случая</h3>
+                  <p>
+                    При прием уточняваме материал, нюанс и приоритет. Целта е да няма
+                    изненади по време на изработката.
+                  </p>
+                </article>
+
+                <article class="serviceCard reveal">
+                  <h3>Срокове</h3>
+                  <p>
+                    Стандартно: 5–7 работни дни. Естетични случаи: 7–10 работни дни.
+                    При комплексни конструкции срокът се уточнява предварително.
+                  </p>
+                </article>
+
+                <article class="serviceCard reveal">
+                  <h3>Доставка</h3>
+                  <p>
+                    Изпращане с куриер до цялата страна. Организираме логистиката така,
+                    че да не забавя процеса.
+                  </p>
+                </article>
               </div>
+            </div>
+          </div>
+        </section>
 
-              <div class="serviceItem reveal">
-                <span class="serviceItem__n">03</span>
-                <h3>Металокерамика</h3>
+        <!-- CASES -->
+        <section class="chapter chapter--muted section" id="cases" data-rail-label="Случаи">
+          <div class="container chapter__grid">
+            <div class="chapter__main">
+              <h2 class="chapter__title reveal slideTitle">Подбрани работи</h2>
+
+              <div class="cases">
+                <!-- CASE 1 -->
+                <article class="case reveal">
+                  <h3 class="case__title">
+                    Циркониева конструкция – горни централни и латерални резци (12–22)
+                  </h3>
+
+                  <p class="case__text">
+                    Изработка на фронтална циркониева конструкция върху четирите горни
+                    резеца с внимание към пропорциите, линията на усмивката и естествения
+                    преход към гингивата. Формата и контурите са съобразени така, че да
+                    осигурят стабилни контакти и хармонична позиция във фронта.
+                    Инцизалните ръбове са моделирани с лека текстура и дълбочина.
+                  </p>
+
+                  <div class="case__media">
+                    <img
+                      class="case__img"
+                      src="./assets/cases/case-1.1.JPG"
+                      alt="Циркониева конструкция на горни резци (12–22) — снимка 1"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <img
+                      class="case__img"
+                      src="./assets/cases/case-1.2.JPG"
+                      alt="Циркониева конструкция на горни резци (12–22) — снимка 2"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </article>
+
+                <!-- CASE 2 -->
+                <article class="case reveal">
+                  <h3 class="case__title">Послойна керамика – естетична работа върху 12–22</h3>
+
+                  <p class="case__text">
+                    Послойна керамика върху горните централни и латерални резци с акцент
+                    върху балансирана форма и естествено вписване във фронта.
+                    Конструкцията е изградена с плавни контури и умерена
+                    транслуцентност, така че да се запази стабилна и спокойна естетика
+                    без прекалена яркост. Гингивалната част е оформена с внимание към
+                    анатомичния преход и меките тъкани, а инцизалните ръбове са
+                    моделирани чисто и симетрично.
+                  </p>
+
+                  <div class="case__media">
+                    <img
+                      class="case__img"
+                      src="./assets/cases/case-2.1.JPG"
+                      alt="Послойна керамика на горни резци (12–22) — снимка 1"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <img
+                      class="case__img"
+                      src="./assets/cases/case-2.2.JPG"
+                      alt="Послойна керамика на горни резци (12–22) — снимка 2"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </article>
               </div>
+            </div>
+          </div>
+        </section>
 
-              <div class="serviceItem reveal">
-                <span class="serviceItem__n">04</span>
-                <h3>Фасети</h3>
-              </div>
+        <!-- SERVICES -->
+        <section class="chapter section" id="services" data-rail-label="Услуги">
+          <div class="container chapter__grid">
+            <div class="chapter__main">
+              <h2 class="chapter__title reveal slideTitle">Основни направления</h2>
 
-              <div class="serviceItem serviceItem--wide reveal">
-                <span class="serviceItem__n">05</span>
-                <div class="serviceItem__stack">
-                  <h3>Други конструкции</h3>
-                  <div class="serviceItem__note">
-                    по предварително запитване
+              <div class="servicesList">
+                <div class="serviceItem reveal">
+                  <span class="serviceItem__n">01</span>
+                  <h3>Цирконий</h3>
+                </div>
+
+                <div class="serviceItem reveal">
+                  <span class="serviceItem__n">02</span>
+                  <h3>Работа върху импланти</h3>
+                </div>
+
+                <div class="serviceItem reveal">
+                  <span class="serviceItem__n">03</span>
+                  <h3>Металокерамика</h3>
+                </div>
+
+                <div class="serviceItem reveal">
+                  <span class="serviceItem__n">04</span>
+                  <h3>Фасети</h3>
+                </div>
+
+                <div class="serviceItem serviceItem--wide reveal">
+                  <span class="serviceItem__n">05</span>
+                  <div class="serviceItem__stack">
+                    <h3>Други конструкции</h3>
+                    <div class="serviceItem__note">по предварително запитване</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- HOW WE WORK -->
-      <section class="chapter chapter--muted" id="process">
-        <div class="container chapter__grid">
-          <aside class="chapter__side reveal">
-            <div class="chapter__index">06</div>
-            <div class="chapter__label">Процес</div>
-          </aside>
+        <!-- CONTACT -->
+        <section class="chapter chapter--final section" id="contact" data-rail-label="Контакт">
+          <div class="container final">
+            <h2 class="final__title reveal">Контакти</h2>
+            <p class="final__text reveal">
+              Изпрати ни запитване с типа конструкция, броя елементи и желан срок — ще
+              отговорим с конкретика.
+            </p>
 
-          <div class="chapter__main">
-            <h2 class="chapter__title reveal">Стъпки</h2>
+            <div class="final__card reveal">
+              <div class="row">
+                <span class="row__k">Имейл</span>
+                <a class="row__v" href="mailto:rumen.kisyov.dental.lab@gmail.com"
+                  >rumen.kisyov.dental.lab@gmail.com</a
+                >
+              </div>
 
-            <ol class="steps">
-              <li class="step reveal">
-                <div class="step__n">1</div>
-                <div class="step__c">
-                  <h3>Прием</h3>
-                  <p>
-                    Поръчка + данни по случая (материал, нюанс, особености).
-                  </p>
-                </div>
-              </li>
+              <div class="row">
+                <span class="row__k">Телефон</span>
+                <a class="row__v" href="tel:+359887859765">+359 88 785 9765</a>
+              </div>
 
-              <li class="step reveal">
-                <div class="step__n">2</div>
-                <div class="step__c">
-                  <h3>Уточняване</h3>
-                  <p>Критични параметри и очаквания за предаване.</p>
-                </div>
-              </li>
+              <div class="row">
+                <span class="row__k">Град</span>
+                <span class="row__v">Пловдив</span>
+              </div>
 
-              <li class="step reveal">
-                <div class="step__n">3</div>
-                <div class="step__c">
-                  <h3>Изработка</h3>
-                  <p>Производство и обработка според конкретния случай.</p>
-                </div>
-              </li>
+              <div class="row">
+                <span class="row__k">Инстаграм</span>
+                <a
+                  class="row__v"
+                  href="https://www.instagram.com/rumen.kisyov.dental.lab"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@rumen.kisyov.dental.lab</a
+                >
+              </div>
 
-              <li class="step reveal">
-                <div class="step__n">4</div>
-                <div class="step__c">
-                  <h3>Финален контрол</h3>
-                  <p>Пасив, маргини, контакти, оклузия и визуална проверка.</p>
-                </div>
-              </li>
-
-              <li class="step reveal">
-                <div class="step__n">5</div>
-                <div class="step__c">
-                  <h3>Предаване</h3>
-                  <p>Подготовка и изпращане към клиниката.</p>
-                </div>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section class="chapter chapter--final" id="contact">
-        <div class="container final">
-          <h2 class="final__title reveal">Контакт</h2>
-          <p class="final__text reveal">
-            Изпрати ни запитване с типа конструкция, броя елементи и желан срок
-            — ще отговорим с конкретика.
-          </p>
-
-          <div class="final__card reveal">
-            <div class="row">
-              <span class="row__k">Имейл</span>
-              <a class="row__v" href="mailto:rumen.kisyov.dental.lab@gmail.com"
-                >rumen.kisyov.dental.lab@gmail.com</a
-              >
-            </div>
-
-            <div class="row">
-              <span class="row__k">Телефон</span>
-              <a class="row__v" href="tel:+359887859765">+359 88 785 9765</a>
-            </div>
-
-            <div class="row">
-              <span class="row__k">Град</span>
-              <span class="row__v">Пловдив</span>
-            </div>
-
-            <div class="row">
-              <span class="row__k">Инстаграм</span>
-              <a
-                class="row__v"
-                href="https://www.instagram.com/rumen.kisyov.dental.lab"
-                target="_blank"
-                rel="noopener noreferrer"
-                >@rumen.kisyov.dental.lab</a
-              >
-            </div>
-
-            <div class="final__actions">
-              <a class="btn btn--ghost" href="#hero">Начало</a>
+              <div class="final__actions">
+                <a class="btn btn--ghost" href="#" data-target="hero">Начало</a>
+              </div>
             </div>
           </div>
+        </section>
+      </main>
 
-          <p class="footnote">© <span id="year"></span> RK Dental Lab</p>
-        </div>
-      </section>
-    </main>
+      <footer class="siteFooter">© <span id="year"></span> RK Dental Lab</footer>
 
-    <script>
-      (function () {
-        var yearEl = document.getElementById('year');
-        if (yearEl) {
-          yearEl.textContent = String(new Date().getFullYear());
-        }
-
-        var progressFill = document.getElementById('progressFill');
-
-        var page = document.querySelector('.page');
-        var sections = Array.prototype.slice.call(
-          document.querySelectorAll('.page > section'),
-        );
-        var prefersReducedMotion =
-          window.matchMedia &&
-          window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        if (!page || sections.length === 0) {
-          return;
-        }
-
-        document.documentElement.style.overflow = 'hidden';
-        document.body.style.overflow = 'hidden';
-
-        var currentIndex = 0;
-        var isLocked = false;
-        var lockMs = prefersReducedMotion ? 0 : 950;
-
-        function clampIndex(i) {
-          if (i < 0) {
-            return 0;
+      <script>
+        (function () {
+          // year
+          var yearEl = document.getElementById('year');
+          if (yearEl) {
+            yearEl.textContent = String(new Date().getFullYear());
           }
-          if (i > sections.length - 1) {
-            return sections.length - 1;
+
+          var prefersReducedMotion =
+            window.matchMedia &&
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+          // -------------------------
+          // Reveal animations (reversible)
+          // -------------------------
+          var reveals = Array.prototype.slice.call(
+            document.querySelectorAll('.reveal'),
+          );
+
+          if (!prefersReducedMotion) {
+            var sections = Array.prototype.slice.call(
+              document.querySelectorAll('main.page > section'),
+            );
+
+            sections.forEach(function (sec) {
+              var items = sec.querySelectorAll('.reveal');
+              var i = 0;
+              items.forEach(function (el) {
+                el.style.setProperty('--d', String(Math.min(i, 8) * 70) + 'ms');
+                i += 1;
+              });
+            });
           }
-          return i;
-        }
 
-        function setProgress(i) {
-          var denom = Math.max(1, sections.length - 1);
-          var p = (i / denom) * 100;
+          if (prefersReducedMotion) {
+            reveals.forEach(function (el) {
+              el.classList.add('is-visible');
+            });
+          } else if (!('IntersectionObserver' in window)) {
+            reveals.forEach(function (el) {
+              el.classList.add('is-visible');
+            });
+          } else {
+            var io = new IntersectionObserver(
+              function (entries) {
+                entries.forEach(function (entry) {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                  } else {
+                    entry.target.classList.remove('is-visible');
+                  }
+                });
+              },
+              { threshold: 0.14, rootMargin: '0px 0px -12% 0px' },
+            );
 
-          if (progressFill) {
-            progressFill.style.height = p.toFixed(2) + '%';
+            reveals.forEach(function (el) {
+              io.observe(el);
+            });
           }
-        }
 
-        function revealIn(section) {
-          var nodes = section.querySelectorAll('.reveal');
-          nodes.forEach(function (el) {
-            el.classList.add('is-visible');
-          });
-        }
+          // -------------------------
+          // ScrollNav (dots + active label pill)
+          // -------------------------
+          var railDots = document.getElementById('railDots');
 
-        function setActive(i, pushHash) {
-          currentIndex = clampIndex(i);
+          var railSections = Array.prototype.slice
+            .call(document.querySelectorAll('main.page > section'))
+            .filter(function (s) {
+              return Boolean(s.id);
+            });
 
-          sections.forEach(function (s, idx) {
-            var active = idx === currentIndex;
+          function scrollToSection(id) {
+            var el = document.getElementById(id);
+            if (!el) {
+              return;
+            }
 
-            s.classList.toggle('is-active', active);
-            s.classList.remove('is-prev', 'is-next');
+            // Center the SECTION in the viewport (Y axis)
+            var rect = el.getBoundingClientRect();
+            var y = window.scrollY + rect.top;
+            var target = y - window.innerHeight / 2 + rect.height / 2;
 
-            if (!active) {
-              if (idx < currentIndex) {
-                s.classList.add('is-prev');
-              } else {
-                s.classList.add('is-next');
+            // Clamp so we don't overscroll past the document edges
+            var max =
+              document.documentElement.scrollHeight - window.innerHeight;
+            if (target < 0) {
+              target = 0;
+            }
+            if (target > max) {
+              target = max;
+            }
+
+            window.scrollTo({
+              top: target,
+              behavior: prefersReducedMotion ? 'auto' : 'smooth',
+            });
+          }
+
+          // -------------------------
+          // Use data-target navigation (no URL hash)
+          // -------------------------
+          function wireDataTargetLinks() {
+            var links = Array.prototype.slice.call(
+              document.querySelectorAll('[data-target]'),
+            );
+
+            links.forEach(function (a) {
+              a.addEventListener('click', function (e) {
+                e.preventDefault();
+                var id = a.getAttribute('data-target');
+                if (!id) {
+                  return;
+                }
+                scrollToSection(id);
+
+                // keep URL clean
+                history.replaceState(
+                  null,
+                  '',
+                  window.location.pathname + window.location.search,
+                );
+              });
+            });
+          }
+
+          wireDataTargetLinks();
+
+          function setActiveDot() {
+            if (!railDots) {
+              return;
+            }
+
+            var mid = window.innerHeight * 0.5;
+            var activeId = null;
+
+            for (var i = 0; i < railSections.length; i += 1) {
+              var r = railSections[i].getBoundingClientRect();
+              if (r.top <= mid && r.bottom >= mid) {
+                activeId = railSections[i].id;
+                break;
               }
             }
 
-            s.setAttribute('aria-hidden', active ? 'false' : 'true');
-          });
-
-          revealIn(sections[currentIndex]);
-          setProgress(currentIndex);
-
-          if (pushHash) {
-            var id = sections[currentIndex].id;
-            if (id) {
-              history.replaceState(null, '', '#' + id);
-            }
-          }
-        }
-
-        function goTo(i, pushHash) {
-          var next = clampIndex(i);
-          if (next === currentIndex) {
-            return;
-          }
-          if (isLocked) {
-            return;
+            var items = railDots.querySelectorAll('.scrollNav__item');
+            items.forEach(function (it) {
+              var isActive = it.getAttribute('data-target') === activeId;
+              it.classList.toggle('is-active', isActive);
+              it.setAttribute('aria-current', isActive ? 'true' : 'false');
+            });
           }
 
-          setActive(next, pushHash);
-
-          if (lockMs > 0) {
-            isLocked = true;
-            window.setTimeout(function () {
-              isLocked = false;
-            }, lockMs);
-          }
-        }
-
-        sections.forEach(function (s) {
-          s.classList.remove('is-active', 'is-prev', 'is-next');
-          s.setAttribute('aria-hidden', 'true');
-        });
-
-        var hash = (location.hash || '').replace('#', '');
-        if (hash) {
-          var startIdx = sections.findIndex(function (s) {
-            return s.id === hash;
-          });
-          if (startIdx >= 0) {
-            currentIndex = startIdx;
-          }
-        }
-
-        setActive(currentIndex, false);
-
-        function onWheel(e) {
-          if (prefersReducedMotion) {
-            return;
-          }
-
-          e.preventDefault();
-
-          var dy = e.deltaY || 0;
-          if (Math.abs(dy) < 8) {
-            return;
-          }
-
-          if (dy > 0) {
-            goTo(currentIndex + 1, true);
-          } else {
-            goTo(currentIndex - 1, true);
-          }
-        }
-
-        window.addEventListener('wheel', onWheel, {passive: false});
-
-        window.addEventListener('keydown', function (e) {
-          if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
-            e.preventDefault();
-            goTo(currentIndex + 1, true);
-            return;
-          }
-
-          if (e.key === 'ArrowUp' || e.key === 'PageUp') {
-            e.preventDefault();
-            goTo(currentIndex - 1, true);
-            return;
-          }
-
-          if (e.key === 'Home') {
-            e.preventDefault();
-            goTo(0, true);
-            return;
-          }
-
-          if (e.key === 'End') {
-            e.preventDefault();
-            goTo(sections.length - 1, true);
-            return;
-          }
-        });
-
-        var touchY = null;
-
-        window.addEventListener(
-          'touchstart',
-          function (e) {
-            if (!e.touches || e.touches.length === 0) {
-              return;
-            }
-            touchY = e.touches[0].clientY;
-          },
-          {passive: true},
-        );
-
-        window.addEventListener(
-          'touchend',
-          function (e) {
-            if (touchY === null) {
-              return;
-            }
-            var endY =
-              (e.changedTouches &&
-                e.changedTouches[0] &&
-                e.changedTouches[0].clientY) ||
-              touchY;
-            var diff = touchY - endY;
-            touchY = null;
-
-            if (Math.abs(diff) < 40) {
+          function buildDots() {
+            if (!railDots) {
               return;
             }
 
-            if (diff > 0) {
-              goTo(currentIndex + 1, true);
-            } else {
-              goTo(currentIndex - 1, true);
+            railDots.innerHTML = '';
+
+            railSections.forEach(function (s, idx) {
+              var label = s.getAttribute('data-rail-label') || s.id;
+
+              var btn = document.createElement('button');
+              btn.type = 'button';
+              btn.className = 'scrollNav__item';
+              btn.setAttribute('data-target', s.id);
+              btn.setAttribute('aria-label', label);
+
+              // dot
+              var dot = document.createElement('span');
+              dot.className = 'scrollNav__dot';
+              dot.setAttribute('aria-hidden', 'true');
+
+              // label (only visible when active)
+              var text = document.createElement('span');
+              text.className = 'scrollNav__text';
+              text.textContent = label;
+
+              // tooltip (visible on hover/focus for non-active)
+              var tip = document.createElement('span');
+              tip.className = 'scrollNav__tip';
+              tip.textContent = label;
+              tip.setAttribute('aria-hidden', 'true');
+
+              btn.appendChild(dot);
+              btn.appendChild(text);
+              btn.appendChild(tip);
+
+              btn.addEventListener('click', function () {
+                scrollToSection(s.id);
+
+                // keep URL clean
+                history.replaceState(
+                  null,
+                  '',
+                  window.location.pathname + window.location.search,
+                );
+              });
+
+              railDots.appendChild(btn);
+
+              if (idx === 0) {
+                btn.classList.add('is-start');
+              }
+            });
+          }
+
+          buildDots();
+
+          // -------------------------
+          // Title drift on scroll
+          // -------------------------
+          var slideTitles = Array.prototype.slice.call(
+            document.querySelectorAll('.slideTitle'),
+          );
+
+          function updateTitleSlides() {
+            if (prefersReducedMotion) {
+              return;
             }
-          },
-          {passive: true},
-        );
 
-        document.addEventListener('click', function (e) {
-          var a =
-            e.target && e.target.closest
-              ? e.target.closest('a[href^="#"]')
-              : null;
-          if (!a) {
-            return;
+            var vh = Math.max(1, window.innerHeight);
+            slideTitles.forEach(function (el) {
+              var r = el.getBoundingClientRect();
+              var t = (vh * 0.55 - r.top) / (vh * 0.8);
+              t = Math.max(0, Math.min(1, t));
+
+              var k = (t - 0.5) * 2;
+              var px = k * 22;
+
+              el.style.setProperty('--sx', px.toFixed(2) + 'px');
+            });
           }
 
-          var href = a.getAttribute('href') || '';
-          var id = href.replace('#', '').trim();
-          if (!id) {
-            return;
+          var rafPending = false;
+          function onScroll() {
+            if (rafPending) {
+              return;
+            }
+            rafPending = true;
+            window.requestAnimationFrame(function () {
+              rafPending = false;
+              setActiveDot();
+              updateTitleSlides();
+            });
           }
 
-          var idx = sections.findIndex(function (s) {
-            return s.id === id;
+          window.addEventListener('scroll', onScroll, { passive: true });
+          window.addEventListener(
+            'resize',
+            function () {
+              setActiveDot();
+              updateTitleSlides();
+            },
+            { passive: true },
+          );
+
+          setActiveDot();
+          updateTitleSlides();
+
+          window.addEventListener('load', function () {
+            setActiveDot();
+            updateTitleSlides();
           });
-
-          if (idx >= 0) {
-            e.preventDefault();
-            goTo(idx, true);
-          }
-        });
-      })();
-    </script>
+        })();
+      </script>
+    </div>
   </body>
 </html>
