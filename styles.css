@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --bg: #111417;
   --text: rgba(255, 255, 255, 0.92);
@@ -31,6 +32,7 @@
 html,
 body {
   height: 100%;
+  overflow-x: clip;
 }
 
 html {
@@ -357,6 +359,8 @@ img {
   display: grid;
   align-items: center;
   position: relative;
+  /* 🔥 Prevent horizontal scroll from watermark */
+  overflow: hidden;
 }
 
 .hero .container {
@@ -429,14 +433,18 @@ img {
   -webkit-mask-image: radial-gradient(circle at center, black 55%, transparent 85%);
 }
 
-/* make the image inside picture behave like your old <img> */
-.hero__mark > img {
-  width: 100%;
-  height: auto;
-  display: block;
+/* Tablet + Mobile (since the picture switches at 1200px) */
+@media (max-width: 1200px) {
+  .hero__mark {
+    top: 62%;
+    width: 120vw; /* less aggressive than 170vw */
+    opacity: 0.35;
+    transform: translate(-50%, -50%) scale(1.05);
+    mask-image: radial-gradient(circle at center, black 52%, transparent 85%);
+    -webkit-mask-image: radial-gradient(circle at center, black 52%, transparent 85%);
+  }
 }
-
-/* Mobile refinement */
+/* Phone refinement */
 @media (max-width: 768px) {
   .hero__mark {
     top: 70%;
@@ -447,7 +455,7 @@ img {
     -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 85%);
   }
 }
-/* Optional: on very large monitors, avoid it becoming absurdly huge */
+/* Ultra-wide screens cap */
 @media (min-width: 1600px) {
   .hero__mark {
     width: 1400px;
